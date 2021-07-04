@@ -1,82 +1,55 @@
 <!doctype html>
 
 <html lang="en">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+
+	
   <head>
-    <title>Creación de usuarios </title>
+    <title>CREACION DE USUARIOS </title>
     
 	<!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
 
     <!-- Bootstrap CSS -->
 		
-		
-		<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>  </head>
-				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-		
-  
+		<LINK REL=StyleSheet HREF="css/estilo.css" TYPE="text/css" MEDIA=screen>
+  </head>
   
   
   <div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				
-				<h3 align="center"><img src="./css/p1.jpg" class="img-responsive" alt="PHP MySQL logos"></h3><hr />
-				 
+				<p> </p>		
 		</div>	
 	</div>
 	
 	<div class="row">	
-		<div class="col-sm-12 col-md-6 col-lg-6"></div>
+		<div class="col-sm-12 col-md-6 col-lg-6">
 		
 		<h3 align="center">REGISTRO DE CUENTA</h3><hr />
 		
-		<form class="row g-3 needs-validation" method="post" action="create-account.php" method="POST">
-			
-			<div class="col-md-6">				
+		<form method="post" action="create-account.php" method="POST">
+			<div class="form-group">				
 				<p align="center">
-					<i class="fas fa-user"></i>
-				<label for="NOMBRE">NOMBRE:</label>
-				<input type="text" class="form-control" name="name" placeholder=" " required>			
+				<label for="NOMBRE">USER:</label>
+				<input type="text" class="form-control" name="user" placeholder=" " required>			
 		  </div>
-		  <div class="col-md-6">						
-				<p align="center">
-					<i class="fas fa-user"></i>
-				<label for="APELLIDO">APELLIDO:</label>
-				<input type="text" class="form-control" name="apellido" placeholder=" " required>			
-		  </div>
-
+		  
 		  <div class="form-group">				
 				<p align="center">
-					<i class="fas fa-envelope"></i>	
-				<label for="mail">E-mail  :</label>
-				
-				<input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder=" " required>
-			</div>
-		  
-
-		  <div class="form-group">	
-			<div class="col-md-6">					
-				<p align="center">
-					<i class="fas fa-lock"></i>
 				<label for="PASSWORD">PASSWORD:</label>
 				<input type="password" class="form-control" name="password" placeholder=" " required>
 			</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-6">						
-						<p align="center">
-					<i class="fas fa-lock"></i>
-				<label for="REPITA PASSWORD" class="form-label">REPITA PASSWORD:</label>
+<div class="form-group">				
+				<p align="center">
+				<label for=" REPITA PASSWORD">REPITA PASSWORD:</label>
 				<input type="password" class="form-control" name="password" placeholder=" " required>
 			</div>
-		</div>
-
 		  
-		  <button class="btn btn-primary" type="submit" >Registrarse</button>
+		  	<p align="center">
 		  
+		  <button type="submit" class="btn btn-success btn-block">REGISTRARSE</button>
 			</p>
 		</form>		
 		</div>		
@@ -86,3 +59,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
  
+	</body>
+</html>

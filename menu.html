@@ -1,8 +1,55 @@
 <Center>
-    <link rel=StyleSheet href="estilo.css" type="text/css" media=screen>
+    <!-- <link rel=StyleSheet href="style/estilo.css" type="text/css" media=screen> -->
+    
+    <link rel="stylesheet" href="style/skeleton.css">
+    
+    <link rel="StyleSheet" href="style/estilo.css" type="text/css" media="screen" />
+  <div class="fondo">
     <title>Menu</title>
         <h1>Menu</h1>
 
+
+
+        <div align="center"><h1>Busqueda para el equipo pokedex</h1></div>
+    
+  <!-- Main container -->
+  <div class="container">
+
+    
+    <div class="get-info-form">
+      <form onsubmit="return formData(event)">
+        <div class="row">
+          <label for="username">ingrese nombre pokemon que quieres agregar</label>
+          <input type="text" id="username" placeholder="Search...">
+        
+		</div>
+        
+        <div id="error-message">
+            <span id="error-content"></span>
+          </div>
+      </form>
+      
+    </div>
+         
+      <table class="u-full-width" id="pokemon-list">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="box">
+<div class="container-2">
+        <button type="button" onclick="eatFood()" id="get-pokemons">AGREGAR AL EQUIPO EN LA BASE DE DATOS </button>
+   
+    </div>
+	</div>
     
         <nav class="navigation">
             <ul class="nav">
@@ -16,61 +63,28 @@
                         Crear Equipo
                     </a>
                 </li>
+                <li>
+                  <a href="1lucha.html">
+                      Lucha
+                  </a>
+              </li>
             </ul>
         </nav>
     
-<table border="1">
-    <thead>
-      <tr>
-        <th>Imagen</th>
-        <th>Nombre</th>
-        <th>Tipo</th>
-        <th>Evoluciona en...</th>
-      </tr>
-    <thead>
-    <tbody>
-<!-- Bubasaur -->
-      <tr>
-        <td>
-          <img
-            src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png"
-          />
-        </td>
-        <td>Bulbasaur</td>
-        <td>Planta</td>
-        <td><a href="http://pokemon.wikia.com/wiki/Ivysaur" target="_blank">Ivysaur</a></td>
-      </tr>
-      <tr>
-        <td>
-          <img
-            src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png"
-          />
-        </td>
-<!-- Charmander -->
-        <td>Charmander</td>
-        <td>Fuego</td>
-        <td><a href="http://pokemon.wikia.com/wiki/Charmeleon" target="_blank">Charmeleon</a></td>
-      </tr>
-      <tr>
-        <td>
-          <img
-            src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png"
-          />
-        </td>
-<!-- Squirtle -->
-        <td>Squirtle</td>
-        <td>Agua</td>
-        <td><a href="http://pokemon.wikia.com/wiki/Wartortle" target="_blank">Wartortle</a></td>
-      </tr>
-    </tbody>
-  </table>
+
+   
+   
+
   <input type="button" id="editar" onclick="alert('Editar')" value = "Editar" />
   <input type="button" id="eliminar" onclick="alert('Eliminar')" value = "Eliminar" />
 
+</div>
 <br/>
 <br/>
 <br/>
 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/listado.js"></script>
 
   <a href="listapokemon.html" title="CREATE CUENTA">Lista de Pokemones</a>
 
