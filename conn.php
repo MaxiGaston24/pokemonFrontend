@@ -6,6 +6,6 @@ $dbuser	= "root";		  // database username
 
 $dbpass	= "";		     // database passwor
 
-$dbname	= "PHPLogin2";    // database name
+$dbname	= "pokedex_db";    // database name
 
 ?>

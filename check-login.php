@@ -2,12 +2,11 @@
 session_start();
 ?>
 
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
-
   <head>
-    <title>Check Login and create session</title>
+    <title>Verificar Iniciar sesión y crear sesión</title>
 	
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -32,30 +31,26 @@ session_start();
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
-	
-	
+		
 	$user = $_POST['user']; 
 	$password = $_POST['password'];
-	
-	
+		
 	$result = mysqli_query($conn, "SELECT * FROM users WHERE user = '$user'");
 	
-	
 	$row = mysqli_fetch_assoc($result);
-	
-	
+		
 	$hash = $row['password'];
 	
 	
 	if (password_verify($_POST['password'], $hash)) {	
 		
 		$_SESSION['loggedin'] = true;
-		$_SESSION['Id'] = $row['Id'];
+		
 $_SESSION['user'] = $row['user'];
 $_SESSION['password'] = $row['password'];	$_SESSION['start'] = time();
 		$_SESSION['expire'] = $_SESSION['start'] + (20 * 60) ;						
 		
-		echo "<div class='alert alert-success' role='alert'><strong>Bienvenido</strong> $row[user]
+		echo "<div class='alert alert-primary' role='alert'><strong>Bienvenido</strong> $row[user]
 	<div align='center'>    
         <tr> 
             <td colspan='2'><h3 align='center'>Pokemones</h3></td> 
@@ -73,8 +68,8 @@ $_SESSION['password'] = $row['password'];	$_SESSION['start'] = time();
 </div>";	
 	
 	} else {
-		echo "<div class='alert alert-danger' role='alert'>Email or Password are incorrects!
-		<p><a href='index.html'><strong>Please try again!</strong></a></p></div>";			
+		echo "<div class='alert alert-danger' role='alert'>Usuario o Contraseña es incorrecto!
+		<p><a href='index.html'><strong>Por favor intente de nuevo!</strong></a></p></div>";			
 	}	
 ?>
 </div>

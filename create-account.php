@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Create account on database</title>
+    <title>Crear Cuenta en Base de datos</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,7 +25,7 @@
 	}
 	
 	// chequea email en base de datos
-	$checkEmail = "SELECT * FROM users WHERE user = '$_POST[user]' ";
+	$checkEmail = "SELECT * FROM pokedexes WHERE user = '$_POST[user]' ";
 
 	// Variable $result 
 	$result = $conn-> query($checkEmail);
@@ -35,7 +35,7 @@
 
 	// If count == 1 existe 
 	if ($count == 1) {
-	echo "<br />". "El mail ya se encuentra en la base de datos" . "<br />";
+	echo "<br />". "El usuario ya se encuentra en la base de datos" . "<br />";
 
 	echo "<a href='index.html'>Por favor reingrese la contraseña</a>.";
 	} else {	
@@ -49,10 +49,11 @@
 	$passHash = password_hash($pass, PASSWORD_DEFAULT);
 	
 	// Query inserta Name, Email and Password hash en la base de datos
-	$query = "INSERT INTO users (user,password) VALUES ('$user', '$passHash')";
 
+	$query = "INSERT INTO users (user,password) VALUES ('$user', '$passHash')";
+	
 	if (mysqli_query($conn, $query)) {
-		echo "<div class='alert alert-success' role='alert'><h3>Your account has been created.</h3>
+		echo "<div class='alert alert-success' role='alert'><h3>Su cuenta a sido registrada.</h3>
 		<a class='btn btn-outline-primary' href='index.html' role='button'>Login</a></div>";		
 		} else {
 			echo "Error: " . $query . "<br>" . mysqli_error($conn);
